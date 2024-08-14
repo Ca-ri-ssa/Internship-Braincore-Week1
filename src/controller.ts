@@ -46,8 +46,8 @@ export const addUser = async (options: { name: string, email: string }) => {
     try {
         const { name, email } = options;
 
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!emailRegex.test(email)) {
+        const emailFormat = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailFormat.test(email)) {
             return new Response(JSON.stringify({ 
                 error: "Invalid email format" 
             }, null, 2), {
