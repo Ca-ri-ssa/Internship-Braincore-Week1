@@ -2,6 +2,7 @@ import { Elysia, t } from 'elysia';
 import { getAllUser, getUserId, addUser, updateUser, deleteUser } from './controller';
 
 const app = new Elysia()
+    //TODO: Implement CRUD operation
     .get("/", () => "Welcome to Elysia Server")
     .get("/users", () => getAllUser())
     .get("/users/:id", ({params: {id}}) => getUserId(id), {
