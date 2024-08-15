@@ -12,7 +12,7 @@
 git clone -b tugas3 https://github.com/Ca-ri-ssa/Internship-Braincore-Week1.git 
 ```
 
-### 2. Install All Depedency
+### 2. Install All Dependency
 ```
 bun install
 ```
