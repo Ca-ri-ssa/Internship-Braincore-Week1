@@ -5,6 +5,7 @@ import { userModel } from '../userModel';
 
 config();
 
+//TODO: Added login feature with the implementation of JWT token.
 export const authentication = new Elysia()
     .use(
         jwt({

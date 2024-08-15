@@ -2,7 +2,7 @@ import { Elysia } from 'elysia';
 import { authentication } from './controller/controller';
 import db from './database';
 
-const app = new Elysia()
+export const app = new Elysia()
     .get("/", () => "Welcome to Elysia Server")
     .get("/users", ({ set }) => {
         try {
