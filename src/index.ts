@@ -1,6 +1,9 @@
 import { Elysia } from 'elysia';
 import { authentication } from './controller/controller';
 import db from './database';
+import { config } from 'dotenv';
+
+config();
 
 export const app = new Elysia()
     .get("/", () => "Welcome to Elysia Server")
