@@ -31,9 +31,15 @@ bun test:2
 ```
 
 ### 4. Environment Variable
-Pada proyek ini, adanya penggunaan variabel environment untuk menyimpan secret key dari JWT.
+Pada proyek ini, adanya penggunaan variabel environment:
 ```ls
+# JWT
 JWT_SECRET_KEY = "<ISI SECRET KEY ANDA>"
+
+# SSL Certificate
+# Self Signed Certificate generated from OpenSSL
+PATH_TO_KEY = "<ISI PATH SSL KEY CERTIFICATE>"
+PATH_TO_CERT = "<ISI PATH SSL CERTIFICATE>"
 ```
 
 ### 5. Run the Code!
@@ -41,4 +47,4 @@ Untuk menjalankan program dari server Bun, dapat dilakukan dengan menggunakan co
 ```
 bun run dev
 ```
-Server akan berjalan pada http://localhost:3000.
+Server akan berjalan pada https://localhost:3000.

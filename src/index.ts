@@ -13,7 +13,19 @@ export const app = new Elysia()
             throw error;
         }
     })
-    .use(authentication)
-    .listen(3000);
+    .use(authentication);
+    // .listen('3000');
 
-console.log(`🦊 Elysia is running at http://${app.server?.hostname}:${app.server?.port}`)
+//TODO: Implement HTTPS
+const server = Bun.serve({
+    fetch: app.handle,
+    port: 3000,
+    hostname: "localhost",
+    tls: {
+        key: Bun.file(process.env.PATH_TO_KEY as string),
+        cert: Bun.file(process.env.PATH_TO_CERT as string)
+    }
+});
+
+console.log(`🦊 Elysia is running at https://${server.hostname}:${server.port}`);
+// console.log(`🦊 Elysia is running at http://${app.server?.hostname}:${app.server?.port}`);

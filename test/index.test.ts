@@ -5,7 +5,7 @@ import db from '../src/database';
 //TODO: Unit Testing
 describe('Elysia', () => {
     let server: any;
-    const port = 3000;
+    const port = 3002;
 
     beforeAll(async () => {
         server = app.listen({ port: port });
